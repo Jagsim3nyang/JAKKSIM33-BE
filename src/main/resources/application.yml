@@ -1,0 +1,21 @@
+spring:
+  datasource: #띄어쓰기 2칸
+    url: jdbc:h2:tcp://localhost/~/jpashop
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update # Change to "update" to prevent schema recreation
+    properties:
+      hibernate:
+        # show_sql: true # Uncomment this line if you want to see SQL logs
+        format_sql: true
+  h2:
+    console:
+      enabled: true # Enables the H2 Console
+      path: /h2-console # Sets the access path for the console
+logging.level:
+  org.hibernate.SQL: debug
+  #org.hibernate.orm.jdbc.bind: trace
